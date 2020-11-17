@@ -4,297 +4,304 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CoALA - Encuesta Taller de Cocina</title>
+		<link rel="stylesheet" href="./css/styles.css" />
 	</head>
 
 	<body>
 		<div class="container">
-			<!--Header-->
-			<header id="header">
-				<h1 class="title">CoALA - Survey Form</h1>
-				<p class="description">
-					Thank you for taking the time to help us improve our vegan cooking
-					workshop.
-				</p>
-			</header>
-			<!--Header-->
-
-			<!--Form-->
-			<form id="survey-form">
-				<div class="form-group">
-					<label id="name-label" for="name"
-						>Name <span class="optional">(optional)</span></label
-					>
-					<input
-						type="text"
-						name="name"
-						id="name"
-						class="form-control"
-						placeholder="Enter your name"
-					/>
-				</div>
-
-				<div class="form-group">
-					<label id="email-label" for="email"
-						>Email <span class="optional">(optional)</span></label
-					>
-					<input
-						type="email"
-						name="email"
-						id="email"
-						class="form-control"
-						placeholder="Enter your Email"
-					/>
-				</div>
-
-				<div class="form-group">
-					<label id="number-label" for="number"
-						>Age<span class="optional">(optional)</span></label
-					>
-					<input
-						type="number"
-						name="age"
-						id="number"
-						min="5"
-						max="110"
-						class="form-control"
-						placeholder="Age"
-					/>
-				</div>
-
-				<div class="form-group">
-					<p>Did you feel comfortable during the workshop?</p>
-					<label>
-						<input
-							name="comfortable"
-							value="yes"
-							type="radio"
-							class="input-radio"
-							checked
-						/>Yes</label
-					>
-
-					<label>
-						<input
-							name="comfortable"
-							value="No"
-							type="radio"
-							class="input-radio"
-							checked
-						/>No</label
-					>
-				</div>
-
-				<div class="form-group">
-					<p>The amount of recipes seems:</p>
-					<label>
-						<input
-							name="amount"
-							value="insufficient"
-							type="radio"
-							class="input-radio"
-							checked
-						/>Insufficient</label
-					>
-					<label>
-						<input
-							name="amount"
-							value="appropriate
-              "
-							type="radio"
-							class="input-radio"
-						/>Appropriate
-					</label>
-
-					<label
-						><input
-							name="amount"
-							value="excessive"
-							type="radio"
-							class="input-radio"
-						/>Excessive</label
-					>
-				</div>
-
-				<div class="form-group">
-					<p>The quality of the recipes was:</p>
-					<label>
-						<input
-							name="quality"
-							value="unsatisfactory"
-							type="radio"
-							class="input-radio"
-							checked
-						/>Unsatisfactory</label
-					>
-					<label>
-						<input
-							name="quality"
-							value="satisfactory
-              "
-							type="radio"
-							class="input-radio"
-						/>Satisfactory
-					</label>
-
-					<label
-						><input
-							name="quality"
-							value="exceeded"
-							type="radio"
-							class="input-radio"
-						/>Exceeded my expectations!</label
-					>
-				</div>
-
-				<div class="form-group">
-					<p>The content of the talk seemed to you:</p>
-					<label>
-						<input
-							name="quality"
-							value="uninteresting"
-							type="radio"
-							class="input-radio"
-							checked
-						/>Uninteresting</label
-					>
-					<label>
-						<input
-							name="quality"
-							value="interesting
-              "
-							type="radio"
-							class="input-radio"
-						/>Interesting
-					</label>
-
-					<label
-						><input
-							name="quality"
-							value="very-interesting"
-							type="radio"
-							class="input-radio"
-						/>Very interesting!</label
-					>
-				</div>
-
-				<div class="form-group">
-					<p>The organization of the workshop was...</p>
-					<label>
-						<input
-							name="organization"
-							value="bad"
-							type="radio"
-							class="input-radio"
-							checked
-						/>Bad</label
-					>
-					<label>
-						<input
-							name="organization"
-							value="regular
-              "
-							type="radio"
-							class="input-radio"
-						/>Regular
-					</label>
-
-					<label
-						><input
-							name="organization"
-							value="good"
-							type="radio"
-							class="input-radio"
-						/>Good</label
-					>
-
-					<label
-						><input
-							name="organization"
-							value="very-good"
-							type="radio"
-							class="input-radio"
-						/>Very good!</label
-					>
-				</div>
-
-				<div class="form-group">
-					<p>
-						How did you meet CoALA?
+			<div class="form">
+				<!--Header-->
+				<header id="header">
+					<img class="logo" alt="logo-coala" src="./img/logo.jpg" />
+					<h1 class="title">CoALA - Survey Form</h1>
+					<p class="description">
+						Thank you for taking the time to help us improve our vegan cooking
+						workshop.
 					</p>
-					<select id="most-like" name="mostLike" class="form-control" required>
-						<option disabled selected value>Select an option</option>
-						<option value="facebook">Facebook</option>
-						<option value="instagram">Instagram</option>
-						<option value="friends">Friends</option>
-						<option value="others">Others</option>
-					</select>
-				</div>
+				</header>
+				<!--Header-->
 
-				<div class="form-group">
-					<p>
-						In the event that you want to receive information in your email,
-						what type of content would you like to receive?
-						<span class="optional">(Check all that apply)</span>
-					</p>
-
-					<label
-						><input
-							name="prefer"
-							value="recipes"
-							type="checkbox"
-							class="input-checkbox"
-						/>Recipes</label
-					>
-					<label>
+				<!--Form-->
+				<form id="survey-form">
+					<div class="form-group">
+						<label id="name-label" for="name"
+							>Name <span class="optional">(optional)</span></label
+						>
 						<input
-							name="prefer"
-							value="events"
-							type="checkbox"
-							class="input-checkbox"
-						/>Events</label
-					>
-					<label
-						><input
-							name="prefer"
-							value="volunteering"
-							type="checkbox"
-							class="input-checkbox"
-						/>Volunteering</label
-					>
-					<label
-						><input
-							name="prefer"
-							value="health-and-nutrition"
-							type="checkbox"
-							class="input-checkbox"
-						/>Health and nutrition</label
-					>
-					<label
-						><input
-							name="prefer"
-							value="information"
-							type="checkbox"
-							class="input-checkbox"
-						/>Information</label
-					>
-				
+							type="text"
+							name="name"
+							id="name"
+							class="form-control"
+							placeholder="Enter your name"
+						/>
+					</div>
 
-				<div class="form-group">
-					<p>Any comments or suggestions?</p>
-					<textarea
-						id="comments"
-						class="input-textarea"
-						name="comment"
-						placeholder="Enter your comment here..."
-					></textarea>
-				</div>
+					<div class="form-group">
+						<label id="email-label" for="email"
+							>Email <span class="optional">(optional)</span></label
+						>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							class="form-control"
+							placeholder="Enter your Email"
+						/>
+					</div>
 
-				<div class="form-group">
-					<button type="submit" id="submit" class="submit-button">
-						Submit
-					</button>
-				</div>
-			</form>
+					<div class="form-group">
+						<label id="number-label" for="number"
+							>Age<span class="optional">(optional)</span></label
+						>
+						<input
+							type="number"
+							name="age"
+							id="number"
+							min="5"
+							max="110"
+							class="form-control"
+							placeholder="Age"
+						/>
+					</div>
+
+					<div class="form-group">
+						<p>Did you feel comfortable during the workshop?</p>
+						<label>
+							<input
+								name="comfortable"
+								value="yes"
+								type="radio"
+								class="input-radio"
+								checked
+							/>Yes</label
+						>
+
+						<label>
+							<input
+								name="comfortable"
+								value="No"
+								type="radio"
+								class="input-radio"
+								checked
+							/>No</label
+						>
+					</div>
+
+					<div class="form-group">
+						<p>The amount of recipes seems:</p>
+						<label>
+							<input
+								name="amount"
+								value="insufficient"
+								type="radio"
+								class="input-radio"
+								checked
+							/>Insufficient</label
+						>
+						<label>
+							<input
+								name="amount"
+								value="appropriate
+								"
+								type="radio"
+								class="input-radio"
+							/>Appropriate
+						</label>
+
+						<label
+							><input
+								name="amount"
+								value="excessive"
+								type="radio"
+								class="input-radio"
+							/>Excessive</label
+						>
+					</div>
+
+					<div class="form-group">
+						<p>The quality of the recipes was:</p>
+						<label>
+							<input
+								name="quality"
+								value="unsatisfactory"
+								type="radio"
+								class="input-radio"
+								checked
+							/>Unsatisfactory</label
+						>
+						<label>
+							<input
+								name="quality"
+								value="satisfactory
+								"
+								type="radio"
+								class="input-radio"
+							/>Satisfactory
+						</label>
+
+						<label
+							><input
+								name="quality"
+								value="exceeded"
+								type="radio"
+								class="input-radio"
+							/>Exceeded my expectations!</label
+						>
+					</div>
+
+					<div class="form-group">
+						<p>The content of the talk seemed to you:</p>
+						<label>
+							<input
+								name="quality"
+								value="uninteresting"
+								type="radio"
+								class="input-radio"
+								checked
+							/>Uninteresting</label
+						>
+						<label>
+							<input
+								name="quality"
+								value="interesting
+								"
+								type="radio"
+								class="input-radio"
+							/>Interesting
+						</label>
+
+						<label
+							><input
+								name="quality"
+								value="very-interesting"
+								type="radio"
+								class="input-radio"
+							/>Very interesting!</label
+						>
+					</div>
+
+					<div class="form-group">
+						<p>The organization of the workshop was...</p>
+						<label>
+							<input
+								name="organization"
+								value="bad"
+								type="radio"
+								class="input-radio"
+								checked
+							/>Bad</label
+						>
+						<label>
+							<input
+								name="organization"
+								value="regular
+								"
+								type="radio"
+								class="input-radio"
+							/>Regular
+						</label>
+
+						<label
+							><input
+								name="organization"
+								value="good"
+								type="radio"
+								class="input-radio"
+							/>Good</label
+						>
+
+						<label
+							><input
+								name="organization"
+								value="very-good"
+								type="radio"
+								class="input-radio"
+							/>Very good!</label
+						>
+					</div>
+
+					<div class="form-group">
+						<p>How did you meet CoALA?</p>
+						<select
+							id="most-like"
+							name="mostLike"
+							class="form-control"
+							required
+						>
+							<option disabled selected value>Select an option</option>
+							<option value="facebook">Facebook</option>
+							<option value="instagram">Instagram</option>
+							<option value="friends">Friends</option>
+							<option value="others">Others</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<p>
+							In the event that you want to receive information in your email,
+							what type of content would you like to receive?
+							<span class="optional">(Check all that apply)</span>
+						</p>
+
+						<label
+							><input
+								name="prefer"
+								value="recipes"
+								type="checkbox"
+								class="input-checkbox"
+							/>Recipes</label
+						>
+						<label>
+							<input
+								name="prefer"
+								value="events"
+								type="checkbox"
+								class="input-checkbox"
+							/>Events</label
+						>
+						<label
+							><input
+								name="prefer"
+								value="volunteering"
+								type="checkbox"
+								class="input-checkbox"
+							/>Volunteering</label
+						>
+						<label
+							><input
+								name="prefer"
+								value="health-and-nutrition"
+								type="checkbox"
+								class="input-checkbox"
+							/>Health and nutrition</label
+						>
+						<label
+							><input
+								name="prefer"
+								value="information"
+								type="checkbox"
+								class="input-checkbox"
+							/>Information</label
+						>
+					</div>
+
+					<div class="form-group">
+						<p>Any comments or suggestions?</p>
+						<textarea
+							id="comments"
+							class="input-textarea"
+							name="comment"
+							placeholder="Enter your comment here..."
+						></textarea>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" id="submit" class="submit-button">
+							Submit
+						</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</body>
 </html>
